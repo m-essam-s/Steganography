@@ -65,7 +65,6 @@ if __name__=="__main__":
     sentence = f"{first_name}_{_id}$"
     binary_stream = sentence_to_binary(sentence)
     print("Binary stream:", binary_stream)
-    #"D:\\CodeSpace\\_workingDdirctories\\KSIU\\_securityOfIS\\Steganography\\Cameraman_graycale.jpg"
     image_path = "./me.jpg"  # Replace with the path to your image
     hide_binary_in_image(image_path, binary_stream)
     save_to_word_file(sentence, binary_stream)
