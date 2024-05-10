@@ -1,6 +1,6 @@
 # Image Steganography with Python
 
-This Python script demonstrates a simple implementation of steganography, a technique of hiding secret data within an ordinary, non-secret file or message to avoid detection. In this case, the script hides a binary stream representing a sentence within an image file.
+This Python script demonstrates a simple implementation of steganography, a technique of hiding secret data within an ordinary, non-secret file or message to avoid detection. In this case, the script hides a binary stream representing a sentence within an image file and generates both a plaintext file and a readable Word file containing the sentence details.
 
 ## How it Works
 
@@ -16,16 +16,19 @@ The `hide_binary_in_image` function takes an image file path and the binary stre
 
 The modified image with the hidden message is saved as `encoded_image.png` in the `_files` directory.
 
-### Step 4: Create a Word File Containing Sentence Details
+### Step 4: Create Files Containing Sentence Details
 
-The `save_to_word_file` function saves details about the sentence, including the sentence itself, its integer ASCII codes, binary ASCII codes, and the binary stream, into a Word file named `sentence_details.docx` in the `_files` directory.
+Two types of files are generated:
+
+- **Plaintext File (`sentence_details`)**: This file contains the sentence, its integer ASCII codes, binary ASCII codes, and the binary stream in a plaintext format.
+- **Readable Word File (`sentence_details.docx`)**: This file contains the sentence details organized in a table for better readability.
 
 ## Usage
 
 1. Ensure you have Python installed on your system.
-2. Install the required dependencies using `pip install pillow`.
+2. Install the required dependencies using `pip install pillow python-docx`.
 3. Place the image you want to encode the message into in the `_files` directory and update the `image_path` variable in the script accordingly.
-4. Run the script. The encoded image (`encoded_image.png`) and the Word file (`sentence_details.docx`) will be generated in the `_files` directory.
+4. Run the script. The encoded image (`encoded_image.png`), the plaintext file (`sentence_details`), and the Word file (`sentence_details.docx`) will be generated in the `_files` directory.
 
 ## Note
 
