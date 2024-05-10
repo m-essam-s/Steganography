@@ -47,12 +47,12 @@ def hide_binary_in_image(image_path, binary_stream):
                 break
 
     # Save the modified image
-    img.save("encoded_image.png")
+    img.save("./_files/encoded_image.png")
     print("Image with hidden message saved as encoded_image.png")
 
 # Step 4: Create a Word file containing the sentence, its integer, and binary ASCII code representations
 def save_to_word_file(sentence, binary_stream):
-    with open("sentence_details.docx", "w") as file:
+    with open("./_files/sentence_details.docx", "w") as file:
         file.write("Sentence: {}\n".format(sentence))
         file.write("Integer ASCII codes: {}\n".format(", ".join(str(ord(char)) for char in sentence)))
         file.write("Binary ASCII codes: {}\n".format(" ".join(format(ord(char), '07b') for char in sentence)))
@@ -65,7 +65,7 @@ if __name__=="__main__":
     sentence = f"{first_name}_{_id}$"
     binary_stream = sentence_to_binary(sentence)
     print("Binary stream:", binary_stream)
-    image_path = "./me.jpg"  # Replace with the path to your image
+    image_path = "./_files/me.jpg"  # Replace with the path to your image
     hide_binary_in_image(image_path, binary_stream)
     save_to_word_file(sentence, binary_stream)
     print("Word file with sentence details saved as sentence_details.docx")
