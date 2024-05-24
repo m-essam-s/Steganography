@@ -101,10 +101,6 @@ For a student named "Mohamed" with ID "221101060":
 - Ensure the image is large enough to accommodate the binary stream.
 - The text file should have sufficient spaces to encode the binary stream without altering the content drastically.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Author
 
 [*Mohamed Essam*](https://github.com/m-essam-s)
